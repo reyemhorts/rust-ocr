@@ -5,6 +5,7 @@ edition = "2021"
 authors= ["reyemhorts"]
 description = "A library to convert png to text with windows api"
 license = "MIT"
+repository = "https://github.com/reyemhorts/rust-ocr"
 
 [lib]
 name = "rust_ocr"
