@@ -2,10 +2,13 @@
 name = "rust_ocr"
 version = "0.1.0"
 edition = "2021"
+authors= ["reyemhorts"]
+description = "A library to convert png to text with windows api"
+licence = "MIT"
 
 [lib]
 name = "rust_ocr"
-path = "src/main.rs"
+path = "src/libs.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

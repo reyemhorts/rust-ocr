@@ -34,7 +34,7 @@ pub fn ocr_with_bounds<T: AsRef<Path>>(png :T, path_to_save:Option<T>) -> Result
 /// # Examples
 /// 
 /// ```
-/// use rust_ocr::libs::png_to_text;
+/// use rust_ocr::png_to_text;
 /// let img = "image.png";
 /// let text = png_to_text(img).unwrap();
 /// assert_eq!("Read the given path to .png file and return the text".to_string(),text);
