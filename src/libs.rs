@@ -9,7 +9,9 @@ use windows::Storage::{FileAccessMode, StorageFile};
 use windows::core::{ HSTRING};
 
 
-
+/// 
+/// Contains the text and the x,y coordinates of the word
+/// 
 #[derive(Serialize,Deserialize,Debug)]
 pub struct Coordinates {
     pub text:   String,
@@ -17,6 +19,10 @@ pub struct Coordinates {
     pub y :     f64
 }
 
+
+/// 
+/// Read the given path to .png file and return a Vec<Coordinates>
+/// 
 pub fn ocr_with_bounds<T: AsRef<Path>>(png :T, path_to_save:Option<T>) -> Result<Vec<Coordinates>, Box<dyn Error>> {
     let bitmap = open_image_as_bitmap(png)?;
     let map = ocr_from_bitmap_with_bounds(bitmap)?; 
