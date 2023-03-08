@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["Imaging",""]],"struct":[["DisplayAdapterId","Required features: `\"Graphics\"`"],["DisplayId","Required features: `\"Graphics\"`"],["IGeometrySource2D","Required features: `\"Graphics\"`"],["PointInt32","Required features: `\"Graphics\"`"],["RectInt32","Required features: `\"Graphics\"`"],["SizeInt32","Required features: `\"Graphics\"`"]]};
