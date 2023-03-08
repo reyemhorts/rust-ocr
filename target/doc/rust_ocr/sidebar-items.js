@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":[["ocr_with_bounds","Read the given path to .png file and return a Vec"],["png_to_text","Read the given path to .png file and return the text"]],"struct":[["Coordinates","Contains the text and the x,y coordinates of the word"]]};

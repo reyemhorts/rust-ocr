@@ -1,1 +1,0 @@
-window.ALL_CRATES = ["itoa","proc_macro2","quote","rust_ocr","ryu","serde","serde_derive","serde_json","syn","unicode_ident","windows","windows_x86_64_msvc"];
