@@ -14,9 +14,11 @@ use windows::core::{ HSTRING};
 /// 
 #[derive(Serialize,Deserialize,Debug)]
 pub struct Coordinates {
-    pub text:   String,
-    pub x :     f64,
-    pub y :     f64
+    pub text:           String,
+    pub x :             f64,
+    pub y :             f64,
+    pub height:         f64,
+    pub width:          f64
 }
 
 
@@ -100,7 +102,10 @@ fn ocr_from_bitmap_with_bounds(bitmap: SoftwareBitmap) -> windows::core::Result<
                 Coordinates{
                     x:rect.X.into(), 
                     y: rect.Y.into(), 
-                    text: name.to_string() }
+                    text: name.to_string(),
+                    height: rect.Height.into(),
+                    width: rect.Width.into()
+                }
             )
         })
     });
