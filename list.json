@@ -1,57 +1,86 @@
 [
   {
+    "height": 10.0,
     "text": "Read",
+    "width": 29.0,
     "x": 8.0,
     "y": 17.0
   },
   {
+    "height": 10.0,
     "text": "the",
+    "width": 22.0,
     "x": 46.0,
     "y": 17.0
   },
   {
+    "height": 13.0,
     "text": "given",
+    "width": 38.0,
     "x": 76.0,
     "y": 17.0
   },
   {
+    "height": 13.0,
     "text": "path",
+    "width": 29.0,
     "x": 123.0,
     "y": 17.0
   },
   {
+    "height": 9.0,
     "text": "to",
+    "width": 15.0,
     "x": 161.0,
     "y": 18.0
   },
   {
+    "height": 10.0,
     "text": ".png",
+    "width": 28.0,
     "x": 186.0,
     "y": 20.0
   },
   {
+    "height": 10.0,
     "text": "file",
+    "width": 30.0,
     "x": 223.0,
     "y": 17.0
   },
   {
+    "height": 10.0,
     "text": "and",
+    "width": 21.0,
     "x": 262.0,
     "y": 17.0
   },
   {
+    "height": 9.0,
     "text": "return",
+    "width": 44.0,
     "x": 293.0,
     "y": 18.0
   },
   {
+    "height": 10.0,
     "text": "the",
+    "width": 22.0,
     "x": 346.0,
     "y": 17.0
   },
   {
+    "height": 9.0,
     "text": "text",
+    "width": 29.0,
     "x": 377.0,
     "y": 18.0
+  },
+  {
+    "height": 13.0,
+    "text": "Read the given path to .png file and return the text",
+    "width": 307.0,
+    "x": 8.0,
+    "y": 20.0
   }
 ]

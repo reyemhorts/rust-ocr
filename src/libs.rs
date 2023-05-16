@@ -95,6 +95,13 @@ fn ocr_from_bitmap_with_bounds(bitmap: SoftwareBitmap) -> windows::core::Result<
     
     result.into_iter().for_each(|line|{
         let words = line.Words().unwrap();
+        // get lines stuff
+        let line_text = line.Text().unwrap().to_string_lossy();
+        let mut _x: f64 = 0.0 as f64;
+        let mut _y = 0.0 as f64;
+        let mut line_heigth = 0.0 as f64;
+        let mut line_width = 0.0 as f64;
+        let mut idx = 0;
         words.into_iter().for_each(|word|{
             let rect = word.BoundingRect().unwrap();
             let name = &word.Text().unwrap().to_string_lossy();
@@ -106,8 +113,29 @@ fn ocr_from_bitmap_with_bounds(bitmap: SoftwareBitmap) -> windows::core::Result<
                     height: rect.Height.into(),
                     width: rect.Width.into()
                 }
-            )
-        })
+            );
+            if idx == 0{
+                _x = rect.X as f64;
+            }
+            if line_heigth < rect.Height as f64 {
+                line_heigth = rect.Height as f64;
+            }
+            line_width += rect.Width as f64;
+            if _y < rect.Y as f64 {
+                _y = rect.Y as f64;
+            }
+            idx +=1;
+            
+        });
+        collected_words.push(
+            Coordinates{
+                x:_x, 
+                y: _y, 
+                text: line_text,
+                height: line_heigth,
+                width: line_width
+            }
+        )
     });
 
     Ok(collected_words)
@@ -132,3 +160,4 @@ fn ocr_from_bitmap(bitmap: SoftwareBitmap) -> windows::core::Result<String> {
 
     Ok(result)
 }
+
